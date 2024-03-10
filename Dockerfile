@@ -14,7 +14,7 @@ RUN go build -trimpath -ldflags "-w -s" -o app
 # デプロイ用のコンテナ
 FROM debian:bullseye-slim as deploy
 
-RUN aptget update
+RUN apt-get update
 
 COPY --from=deploy-buiilder /app/app .
 
