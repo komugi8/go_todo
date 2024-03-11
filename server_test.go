@@ -11,7 +11,7 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-func TestServer_Run(t *testing.T) {	
+func TestServer_Run(t *testing.T) {
 	l, err := net.Listen("tcp", "localhost:0")
 	if err != nil {
 		t.Fatalf("failed to listen port: %v", err)
